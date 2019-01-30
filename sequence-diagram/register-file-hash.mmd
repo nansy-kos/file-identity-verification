@@ -1,0 +1,12 @@
+sequenceDiagram
+Title: ファイルの登録
+participant USER AS 登録者
+participant DAPPS
+participant FIL AS FileIdentityList
+
+USER ->>+ USER: ファイルの準備
+
+USER ->>+ DAPPS: ファイルの登録
+    DAPPS ->>+ FIL: ファイル情報を記録
+    FIL -->>- DAPPS : 応答
+DAPPS -->>- USER : 応答
