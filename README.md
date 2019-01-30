@@ -35,24 +35,45 @@
 
 ### ファイルの登録
 
+*引数*
+
+string _sha3hash
+:   登録したいファイルのSHA3ハッシュ値
+
+*関数*
+
 ```solidity
-function registerFileHash(string _sha3hash) public returns (bool)
+function registerFileHash(string _sha3hash) public returns (bool);
 ```
 
 ![ファイルの登録](./sequence-diagram/register-file-hash.svg)
 
 ### ファイルの抹消
 
+*引数*
+
+bytes32 _keccak256hash
+:   抹消したいファイルの keccak256 Hash
+
+*関数*
+
 ```solidity
-function removeFileHash(bytes32 _keccak256hash) public returns (bool)
+function removeFileHash(bytes32 _keccak256hash) public returns (bool);
 ```
 
 ![ファイルの抹消](./sequence-diagram/remove-file-hash.svg)
 
 ### ファイルの検証
 
+*引数*
+
+bytes32 _keccak256hash
+:   検証したいファイルの keccak256 Hash
+
+*関数*
+
 ```solidity
-function isExist(bytes32 _keccak256hash) public view returns (bool)
+function isExist(bytes32 _keccak256hash) public view returns (bool);
 ```
 
 ```
@@ -61,3 +82,8 @@ function getFileIdentity(bytes32 _keccak256hash) public view returns (bytes32 ke
 
 ![ファイルの検証](./sequence-diagram/get-file-identity.svg)
 
+## 実装
+
+実装はGitHubにて公開する。
+
+https://github.com/PLUSPLUS-JP/file-identity-verification
