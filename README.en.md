@@ -1,5 +1,7 @@
 # Implementation that manages hash value of file data by block chain
 
+*Read this in other languages: [English](README.md), [日本語](README.ja.md).*
+
 ## Overview
 
 Use a smart contract to manage the hash value of data of a file in a block chain, and implement a mechanism to confirm that the file certainly existed at a certain point in time
